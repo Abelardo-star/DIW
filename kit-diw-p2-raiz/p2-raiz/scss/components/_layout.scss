@@ -10,10 +10,41 @@
 @use "../mixins" as *;
 
 .pagina {
+  display: grid;
   min-height: 100dvh;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "cabecera"
+    "heroe"
+    "principal"
+    "consejos"
+    "pie";
+
+  @media (min-width: $bp-md) {
+    grid-template-columns: 1fr 22rem;
+    grid-template-areas:
+      "cabecera cabecera"
+      "heroe heroe"
+      "principal consejos"
+      "pie pie";
+  }
+
+  @media (min-width: $bp-lg) {
+    max-width: 75rem;
+    margin-inline: auto;
+  }
+}
+
+.cabecera {
+  grid-area: cabecera;
+}
+
+.heroe {
+  grid-area: heroe;
 }
 
 .principal {
+  grid-area: principal;
   padding: clamp(1rem, 0.5rem + 2vw, 2.5rem); // 👀 A4 · relleno fluido (ya resuelto)
 }
 
@@ -22,11 +53,13 @@
 }
 
 .consejos {
+  grid-area: consejos;
   padding: clamp(1rem, 0.5rem + 2vw, 2.5rem); // 👀 A4 · relleno fluido (ya resuelto)
   background: var(--color-superficie);
 }
 
 .pie {
+  grid-area: pie;
   padding: $space-md;
   text-align: center;
   color: var(--color-sobre-marca);
