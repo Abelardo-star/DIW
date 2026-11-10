@@ -8,16 +8,14 @@
 
 .destacados {
   display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(min(14rem, 100%), 1fr));
+  // minmax(MINIMO, 1fr) -> cada columna mide como minimo ese MINIMO y maximo 1fr
+  // auto-fit -> mete tantas columnas como quepan en ese minimo
+  // repeat() -> repite las columnas 
+  // resultado -> en movil 1 columna, en la tablet 2 columnas y en el escritorio 3 columnas o mas
 
-  @media (max-width: 599px) {
-    grid-template-columns: 1fr;
-  }
+  gap: $space-md; // usando mi token $space-md
 
-  @include desde($bp-md) {
-    grid-template-columns: 1fr 1fr;
-  }
 
-  @include desde($bp-lg) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+
 }
