@@ -8,6 +8,7 @@
 .destacados {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(14rem, 100%), 1fr));
+
   // minmax(MINIMO, 1fr) -> cada columna mide como minimo ese MINIMO y maximo 1fr
   // auto-fit -> mete tantas columnas como quepan en ese minimo
   // repeat() -> repite las columnas
