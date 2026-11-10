@@ -10,10 +10,12 @@
 
 .hueco-ficha {
   margin-bottom: $space-xl;
+  container-type: inline-size;
 }
 
 .ficha {
   display: flex;
+  flex-direction: column;
   gap: $space-md;
   overflow: hidden;
   border-radius: $radius-md;
@@ -32,4 +34,10 @@
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--color-marca);
+}
+
+@container(min-width: 28rem){
+  .ficha{
+    flex-direction: row;
+  }
 }
