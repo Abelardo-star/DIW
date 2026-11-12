@@ -6,61 +6,57 @@
 //    - especificidad plana: una clase por selector (o .tarjeta-planta--mod .tarjeta-planta__elem). Sin etiquetas ni ids.
 @use "../tokens" as *;
 
-.tarjeta_planta {
-  background-color: $white;
-  border-radius: $radius-md;
+.tarjeta-planta {
+  background-color: $color-surface;
   padding: $space-md;
-  box-shadow: 0 4px 10px rgb(0 0 0 / 1500%);
+  border-radius: $radius-md;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 15%);
 }
 
-.tarjeta_planta__imagen {
+.tarjeta-planta__imagen {
   width: 100%;
   height: auto;
   border-radius: $radius-md;
 }
 
-.tarjeta_planta__nombre {
+.tarjeta-planta__nombre {
   font-size: 20px;
   margin: $space-sm 0;
 }
 
-.tarjeta_planta__descripcion {
+.tarjeta-planta__descripcion {
   font-size: 14px;
-  color: $gray-600;
+  color: $color-muted;
 }
 
-.tarjeta_planta__precio {
+.tarjeta-planta__precio {
   font-size: 18px;
   font-weight: bold;
-  color: $green-500;
+  color: $color-brand-strong;
 }
 
-.tarjeta_planta__boton {
+.tarjeta-planta__boton {
   width: 100%;
   padding: $space-sm;
-  background-color: $green-500;
-  color: $gray-600;
-  border: none;
   border-radius: $radius-md;
-  font-size: 12px;
 }
 
-.tarjeta_planta__etiqueta {
-  background-color: $terracota-300;
-  color: $white;
+.tarjeta-planta__etiqueta {
+  background-color: $color-accent;
+  color: $color-on-brand;
   padding: $space-sm;
   border-radius: $radius-md;
   font-size: 12px;
 }
 
-.tarjeta_planta--oferta {
-  border: 2px solid $terracota-300;
+.tarjeta-planta--oferta {
+  border: 2px solid $color-accent;
 }
 
-.tarjeta_planta--agotada {
+.tarjeta-planta--agotada {
   opacity: 0.6;
 }
 
-.tarjeta_planta--agotada .tarjeta_planta__imagen {
+.tarjeta-planta--agotada .tarjeta-planta__imagen {
   filter: grayscale(100%);
 }
